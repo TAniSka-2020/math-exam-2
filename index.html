@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Holy Child School - Class 1 Math 6-Month Mid-Term Examination & Certificate</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Fredoka:wght@400;500;600;700&family=Great+Vibes&family=Nunito:wght@600;700;800;900;1000&family=Quicksand:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Nunito', 'Quicksand', sans-serif;
+      touch-action: manipulation;
+    }
+    .font-fun { font-family: 'Fredoka', cursive, sans-serif; }
+    .font-formal { font-family: 'Cinzel', serif; }
+    .font-signature { font-family: 'Great Vibes', cursive; }
+
+    /* Floating magical sticker animation */
+    .floating-bubble {
+      position: absolute;
+      pointer-events: none;
+      animation: floatSlow 7s ease-in-out infinite alternate;
+      user-select: none;
+    }
+    @keyframes floatSlow {
+      0% { transform: translateY(0px) rotate(0deg); }
+      100% { transform: translateY(-24px) rotate(14deg); }
+    }
+
+    /* Highlighted question container */
+    .question-highlight-pill {
+      background: linear-gradient(135deg, #fdf2f8 0%, #fae8ff 50%, #f3e8ff 100%);
+      border: 2.5px solid #f472b6;
+      box-shadow: 0 4px 16px -3px rgba(236, 72, 153, 0.28);
+    }
+
+    /* Option button interactive bounce */
+    .option-btn {
+      transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .option-btn:hover {
+      transform: translateY(-2px) scale(1.01);
+      box-shadow: 0 8px 18px -4px rgba(217, 70, 239, 0.28);
+    }
+    .option-btn:active {
+      transform: scale(0.97);
+    }
+
+    /* Interactive clickable counter emoji */
+    .counter-emoji {
+      transition: transform 0.15s ease;
+      cursor: pointer;
+      user-select: none;
+    }
+    .counter-emoji:active {
+      transform: scale(1.35) rotate(10deg);
+    }
+    .counter-emoji.tapped {
+      filter: drop-shadow(0 0 6px rgba(236, 72, 153, 0.9));
+      transform: scale(1.15);
+    }
+
+    /* Screen Certificate Preview Box */
+    .screen-certificate {
+      background: radial-gradient(circle at center, #ffffff 0%, #fffbfd 60%, #fdf2f8 100%);
+      border: 12px double #db2777;
+      box-shadow: inset 0 0 35px rgba(219, 39, 119, 0.16), 0 20px 45px -10px rgba(217, 70, 239, 0.32);
+    }
+
+    /* STRICT A4 LANDSCAPE PRINT RULES - EXACT 1 PAGE ZERO OVERFLOW */
+    @page {
+      size: A4 landscape;
+      margin: 0;
+    }
+
+    @media print {
+      html, body {
+        width: 297mm !important;
+        height: 210mm !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+        background: #ffffff !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      #screen-app, #resultModal, .no-print {
+        display: none !important;
+      }
+
+      #print-certificate-container {
+        display: flex !important;
+        visibility: visible !important;
+        position: fixed !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 297mm !important;
+        height: 210mm !important;
+        max-width: 297mm !important;
+        max-height: 210mm !important;
+        margin: 0 !important;
+        padding: 6.5mm !important;
+        box-sizing: border-box !important;
+        page-break-before: avoid !important;
+        page-break-after: avoid !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        overflow: hidden !important;
+        background: #ffffff !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+
+      .a4-master-card {
+        width: 100% !important;
+        height: 100% !important;
+        border: 9px double #db2777 !important;
+        box-sizing: border-box !important;
+        padding: 5mm 9mm !important;
+        background: #ffffff !important;
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-pink-100 via-purple-100 to-fuchsia-100 min-h-screen text-slate-800 antialiased p-3 sm:p-6 md:p-8 relative overflow-x-hidden">
+
+  <!-- Floating Sparkle Background Elements -->
+  <div class="floating-bubble top-8 left-6 text-3xl opacity-50">🌸</div>
+  <div class="floating-bubble top-24 right-10 text-4xl opacity-50" style="animation-delay: -2s;">🦄</div>
+  <div class="floating-bubble top-80 left-4 text-3xl opacity-40" style="animation-delay: -4s;">🧁</div>
+  <div class="floating-bubble bottom-48 right-12 text-3xl opacity-45" style="animation-delay: -1.5s;">🎀</div>
+  <div class="floating-bubble bottom-32 right-6 text-4xl opacity-50" style="animation-delay: -1s;">👑</div>
+  <div class="floating-bubble bottom-10 left-12 text-3xl opacity-40" style="animation-delay: -3s;">💖</div>
+  <div class="floating-bubble top-1/2 right-4 text-3xl opacity-35" style="animation-delay: -5s;">✨</div>
+
+  <div id="screen-app" class="max-w-4xl mx-auto relative z-10">
+    <!-- Top Header -->
+    <header class="bg-white/95 backdrop-blur-md rounded-3xl shadow-xl border-4 border-pink-300 p-4 sm:p-6 mb-6 relative overflow-hidden">
+      <div class="absolute -top-12 -right-12 w-36 h-36 bg-fuchsia-200 rounded-full opacity-40 pointer-events-none"></div>
+      <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-pink-200 rounded-full opacity-40 pointer-events-none"></div>
+
+      <div class="relative z-10">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b-2 border-dashed border-pink-200 pb-4">
+          <div class="flex items-center gap-3">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-tr from-pink-400 via-fuchsia-400 to-purple-500 rounded-3xl flex items-center justify-center text-white text-3xl sm:text-4xl shadow-lg border-2 border-white">
+              🔢
+            </div>
+            <div>
+              <div class="inline-flex items-center gap-1.5 px-3 py-0.5 bg-pink-100 text-pink-700 rounded-full text-xs font-black uppercase tracking-wider mb-1">
+                <span>💖</span> 6-Month Mid-Term Mathematics • 2026
+              </div>
+              <h1 class="text-2xl sm:text-3xl md:text-4xl font-black text-fuchsia-950 font-fun tracking-wide">
+                HOLY CHILD SCHOOL
+              </h1>
+              <p class="text-xs sm:text-sm text-pink-800 font-extrabold">Class 1 Mathematics Mid-Term Examination (Total Marks: 100)</p>
+            </div>
+          </div>
+
+          <!-- Timer Badge -->
+          <div class="flex flex-row md:flex-col items-center justify-between md:items-end gap-2 bg-gradient-to-r from-pink-50 to-purple-50 border-2 border-pink-300 rounded-2xl p-3 px-4 shadow-sm">
+            <div class="text-xs font-black text-purple-900 uppercase tracking-wider flex items-center gap-1">
+              <span>⏰ Exam Clock</span>
+            </div>
+            <div id="timerDisplay" class="text-3xl font-black text-pink-600 font-fun tracking-wider">
+              60:00
+            </div>
+            <div class="flex items-center gap-1.5 no-print">
+              <button id="timerToggleBtn" onclick="toggleTimer()" class="px-3 py-1 text-xs font-black bg-white border border-pink-300 hover:bg-pink-100 rounded-xl text-pink-900 transition active:scale-95">
+                Pause
+              </button>
+              <button onclick="resetTimer()" class="px-3 py-1 text-xs font-black bg-white border border-purple-200 hover:bg-purple-100 rounded-xl text-purple-900 transition active:scale-95">
+                Reset
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Student Information and Girl Avatars -->
+        <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 pt-4 items-center">
+          <div class="bg-pink-50 border-2 border-pink-200 rounded-2xl p-2.5">
+            <label class="block text-xs font-black text-pink-900 mb-1" for="studentName">Student Name 🌸</label>
+            <input id="studentName" type="text" placeholder="Write your name..." class="w-full bg-white border border-pink-300 rounded-xl px-2.5 py-1.5 text-sm font-bold text-pink-900 focus:outline-none focus:ring-2 focus:ring-pink-400">
+          </div>
+          <div class="bg-purple-50 border-2 border-purple-200 rounded-2xl p-2.5">
+            <label class="block text-xs font-black text-purple-900 mb-1" for="studentRoll">Roll No / ID 🎀</label>
+            <input id="studentRoll" type="text" placeholder="Roll No..." class="w-full bg-white border border-purple-300 rounded-xl px-2.5 py-1.5 text-sm font-bold text-purple-900 focus:outline-none focus:ring-2 focus:ring-purple-400">
+          </div>
+          <div class="bg-fuchsia-50 border-2 border-fuchsia-200 rounded-2xl p-2.5">
+            <label class="block text-xs font-black text-fuchsia-900 mb-1" for="studentSection">Section 🏷️</label>
+            <select id="studentSection" class="w-full bg-white border border-fuchsia-300 rounded-xl px-2 py-1.5 text-sm font-bold text-fuchsia-900 focus:outline-none focus:ring-2 focus:ring-fuchsia-400">
+              <option value="A">Section A (Rose)</option>
+              <option value="B">Section B (Lily)</option>
+              <option value="C">Section C (Tulip)</option>
+            </select>
+          </div>
+          <div class="bg-gradient-to-r from-pink-100 to-purple-100 border-2 border-pink-300 rounded-2xl p-2 flex items-center justify-between">
+            <div>
+              <span class="block text-[10px] font-black text-purple-900 uppercase">Pick Your Avatar</span>
+              <div class="flex items-center gap-1 mt-1">
+                <button type="button" onclick="selectAvatar('👧')" class="text-xl p-1 bg-white rounded-xl border border-pink-300 hover:scale-125 transition shadow-sm">👧</button>
+                <button type="button" onclick="selectAvatar('🦄')" class="text-xl p-1 bg-white rounded-xl border border-purple-300 hover:scale-125 transition shadow-sm">🦄</button>
+                <button type="button" onclick="selectAvatar('👑')" class="text-xl p-1 bg-white rounded-xl border border-pink-300 hover:scale-125 transition shadow-sm">👑</button>
+                <button type="button" onclick="selectAvatar('🧚')" class="text-xl p-1 bg-white rounded-xl border border-purple-300 hover:scale-125 transition shadow-sm">🧚</button>
+                <button type="button" onclick="selectAvatar('🌸')" class="text-xl p-1 bg-white rounded-xl border border-pink-300 hover:scale-125 transition shadow-sm">🌸</button>
+              </div>
+            </div>
+            <div id="currentAvatarDisplay" class="w-12 h-12 bg-white rounded-2xl border-2 border-pink-400 flex items-center justify-center text-2xl shadow-md">
+              👑
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Progress Status Bar -->
+    <div class="sticky top-2 z-30 mb-6 no-print">
+      <div class="bg-white/95 backdrop-blur-md rounded-2xl shadow-lg border-2 border-pink-300 p-3 sm:p-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div class="w-full sm:w-1/2">
+          <div class="flex justify-between items-center text-xs font-black text-pink-900 mb-1">
+            <span>Progress: <span id="progressText" class="text-fuchsia-600 font-extrabold">0 / 40 Answered</span></span>
+            <span id="starCounter" class="text-amber-500 font-fun text-sm">⭐ 0 Stars</span>
+          </div>
+          <div class="w-full bg-pink-100 rounded-full h-4 overflow-hidden border border-pink-200">
+            <div id="progressBar" class="bg-gradient-to-r from-pink-400 via-fuchsia-400 to-purple-500 h-full rounded-full transition-all duration-300 w-0"></div>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
+          <button onclick="speakEnglish('Welcome to your Holy Child School 6-Month Mid-Term Mathematics Examination! Tap the Listen button anytime to hear me read the math problems. You can tap the fruits and stars to count with your finger!')" class="flex items-center justify-center gap-1.5 px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-black rounded-xl text-xs sm:text-sm shadow-md transition active:scale-95">
+            <span>🔊</span>
+            <span>Teacher Voice Cheering You</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Exam Sections Container -->
+    <div class="space-y-10" id="sectionsContainer">
+      <!-- Section A: Place Value & Numbers up to 50 -->
+      <section class="section-card bg-white rounded-3xl p-5 sm:p-7 border-4 border-pink-300 shadow-lg">
+        <div class="flex items-center justify-between border-b-2 border-pink-100 pb-3 mb-4">
+          <div class="flex items-center gap-2">
+            <span class="px-3.5 py-1 bg-gradient-to-r from-pink-500 to-fuchsia-500 text-white rounded-2xl font-fun font-bold text-sm shadow-sm">Section A</span>
+            <h2 class="text-xl sm:text-2xl font-black text-pink-950 font-fun">Place Value & Numbers up to 50 🔟 (10 Marks)</h2>
+          </div>
+          <span class="text-xs sm:text-sm font-black text-pink-600 bg-pink-50 px-3 py-1 rounded-full border border-pink-200">5 Qs × 2 Marks</span>
+        </div>
+        <div id="sectionA_container" class="space-y-4"></div>
+      </section>
+
+      <!-- Section B: Comparing & Ordering Numbers -->
+      <section class="section-card bg-white rounded-3xl p-5 sm:p-7 border-4 border-purple-300 shadow-lg">
+        <div class="flex items-center justify-between border-b-2 border-purple-100 pb-3 mb-4">
+          <div class="flex items-center gap-2">
+            <span class="px-3.5 py-1 bg-gradient-to-r from-purple-500 to-fuchsia-500 text-white rounded-2xl font-fun font-bold text-sm shadow-sm">Section B</span>
+            <h2 class="text-xl sm:text-2xl font-black text-purple-950 font-fun">Comparing & Ordering Numbers ⚖️ (10 Marks)</h2>
+          </div>
+          <span class="text-xs sm:text-sm font-black text-purple-600 bg-purple-50 px-3 py-1 rounded-full border border-purple-200">5 Qs × 2 Marks</span>
+        </div>
+        <div id="sectionB_container" class="space-y-4"></div>
+      </section>
+
+      <!-- Section C: Double-Digit Addition Facts with Clickable Counters -->
+      <section class="section-card bg-white rounded-3xl p-5 sm:p-7 border-4 border-fuchsia-300 shadow-lg">
+        <div class="flex items-center justify-between border-b-2 border-fuchsia-100 pb-3 mb-4">
+          <div class="flex items-center gap-2">
+            <span class="px-3.5 py-1 bg-gradient-to-r from-fuchsia-500 to-pink-500 text-white rounded-2xl font-fun font-bold text-sm shadow-sm">Section C</span>
+            <h2 class="text-xl sm:text-2xl font-black text-fuchsia-950 font-fun">Double-Digit Addition Facts ➕ (Tap & Count) (10 Marks)</h2>
+          </div>
+          <span class="text-xs sm:text-sm font-black text-fuchsia-600 bg-fuchsia-50 px-3 py-1 rounded-full border border-fuchsia-200">5 Qs × 2 Marks</span>
+        </div>
+        <div id="sectionC_container" class="space-y-4"></div>
+      </section>
+
+      <!-- Section D: Subtraction Facts up to 20 -->
+      <section class="section-card bg-white rounded-3xl p-5 sm:p-7 border-4 border-rose-300 shadow-lg">
+        <div class="flex items-center justify-between border-b-2 border-rose-100 pb-3 mb-4">
+          <div class="flex items-center gap-2">
+            <span class="px-3.5 py-1 bg-gradient-to-r from-rose-500 to-pink-500 text-white rounded-2xl font-fun font-bold text-sm shadow-sm">Section D</span>
+            <h2 class="text-xl sm:text-2xl font-black text-rose-950 font-fun">Subtraction Facts up to 20 ➖ (10 Marks)</h2>
+          </div>
+          <span class="text-xs sm:text-sm font-black text-rose-600 bg-rose-50 px-3 py-1 rounded-full border border-rose-200">5 Qs × 2 Marks</span>
+        </div>
+        <div id="sectionD_container" class="space-y-4"></div>
+      </section>
+
+      <!-- Section E: Tap-to-Place Word & Number Bank -->
+      <section class="section-card bg-white rounded-3xl p-5 sm:p-7 border-4 border-pink-300 shadow-lg">
+        <div class="flex items-center justify-between border-b-2 border-pink-100 pb-3 mb-4">
+          <div class="flex items-center gap-2">
+            <span class="px-3.5 py-1 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-2xl font-fun font-bold text-sm shadow-sm">Section E</span>
+            <h2 class="text-xl sm:text-2xl font-black text-pink-950 font-fun">Tap-to-Fill Word & Number Bank 🧩 (20 Marks)</h2>
+          </div>
+          <span class="text-xs sm:text-sm font-black text-pink-600 bg-pink-50 px-3 py-1 rounded-full border border-pink-200">10 Qs × 2 Marks</span>
+        </div>
+        <div id="sectionE_container" class="space-y-4"></div>
+      </section>
+
+      <!-- Section F: 3D Solid Shapes in Everyday Life -->
+      <section class="section-card bg-white rounded-3xl p-5 sm:p-7 border-4 border-purple-300 shadow-lg">
+        <div class="flex items-center justify-between border-b-2 border-purple-100 pb-3 mb-4">
+          <div class="flex items-center gap-2">
+            <span class="px-3.5 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-2xl font-fun font-bold text-sm shadow-sm">Section F</span>
+            <h2 class="text-xl sm:text-2xl font-black text-purple-950 font-fun">3D Solid Shapes in Everyday Life 🧊 (10 Marks)</h2>
+          </div>
+          <span class="text-xs sm:text-sm font-black text-purple-600 bg-purple-50 px-3 py-1 rounded-full border border-purple-200">5 Qs × 2 Marks</span>
+        </div>
+        <div id="sectionF_container" class="space-y-4"></div>
+      </section>
+
+      <!-- Section G: Time, Clock & Calendar -->
+      <section class="section-card bg-white rounded-3xl p-5 sm:p-7 border-4 border-fuchsia-300 shadow-lg">
+        <div class="flex items-center justify-between border-b-2 border-fuchsia-100 pb-3 mb-4">
+          <div class="flex items-center gap-2">
+            <span class="px-3.5 py-1 bg-gradient-to-r from-fuchsia-500 to-purple-500 text-white rounded-2xl font-fun font-bold text-sm shadow-sm">Section G</span>
+            <h2 class="text-xl sm:text-2xl font-black text-fuchsia-950 font-fun">Time, Clock & Calendar ⏰📅 (10 Marks)</h2>
+          </div>
+          <span class="text-xs sm:text-sm font-black text-fuchsia-600 bg-fuchsia-50 px-3 py-1 rounded-full border border-fuchsia-200">5 Qs × 2 Marks</span>
+        </div>
+        <div id="sectionG_container" class="space-y-4"></div>
+      </section>
+
+      <!-- Section H: Mid-Term Story Word Problems -->
+      <section class="section-card bg-white rounded-3xl p-5 sm:p-7 border-4 border-rose-300 shadow-lg">
+        <div class="flex items-center justify-between border-b-2 border-rose-100 pb-3 mb-4">
+          <div class="flex items-center gap-2">
+            <span class="px-3.5 py-1 bg-gradient-to-r from-rose-500 to-purple-500 text-white rounded-2xl font-fun font-bold text-sm shadow-sm">Section H</span>
+            <h2 class="text-xl sm:text-2xl font-black text-rose-950 font-fun">Mid-Term Story Word Problems 🌸🧁 (20 Marks)</h2>
+          </div>
+          <span class="text-xs sm:text-sm font-black text-rose-600 bg-rose-50 px-3 py-1 rounded-full border border-rose-200">4 Qs × 5 Marks</span>
+        </div>
+        <div id="sectionH_container" class="space-y-4"></div>
+      </section>
+    </div>
+
+    <!-- Submit Exam Card -->
+    <div class="bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-600 rounded-3xl shadow-2xl p-6 sm:p-8 text-center text-white no-print mt-10 mb-12 border-4 border-white">
+      <div class="text-4xl mb-2">🎉 👑 🦄 🔢 💖</div>
+      <h3 class="text-2xl sm:text-3xl font-black font-fun mb-2">Finished All 40 Mid-Term Questions?</h3>
+      <p class="text-pink-100 text-sm sm:text-base max-w-lg mx-auto mb-6 font-bold">
+        Check your name and avatar above. When you submit, sparkle confetti will explode and your Holy Child School 6-Month Mid-Term Mathematics Certificate of Achievement will be awarded!
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <button id="submitBtn" onclick="submitExam()" class="w-full sm:w-auto px-10 py-4 bg-white hover:bg-pink-50 text-fuchsia-900 font-fun text-xl font-black rounded-2xl shadow-xl active:scale-95 transition-transform flex items-center justify-center gap-2">
+          <span>💖</span>
+          <span>Submit Exam & Get Mid-Term Certificate!</span>
+        </button>
+        <button onclick="resetAnswers()" class="w-full sm:w-auto px-6 py-4 bg-purple-900/40 hover:bg-purple-900/60 text-white font-extrabold rounded-2xl transition active:scale-95 border border-purple-200/50">
+          Clear Answers 🔄
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Result Modal (On Screen) -->
+  <div id="resultModal" class="fixed inset-0 bg-purple-950/80 backdrop-blur-md z-50 flex items-center justify-center p-2 sm:p-4 hidden overflow-y-auto">
+    <div class="bg-white rounded-3xl shadow-2xl border-4 border-pink-400 w-full max-w-4xl max-h-[95vh] overflow-y-auto p-4 sm:p-8 relative">
+      <button onclick="closeModal()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-pink-100 hover:bg-pink-200 text-pink-700 flex items-center justify-center text-xl font-bold no-print">
+        ✕
+      </button>
+
+      <!-- Modal Header -->
+      <div class="text-center pb-5 border-b border-pink-100 no-print">
+        <div id="modalBadge" class="text-6xl mb-1 animate-bounce">👑</div>
+        <h2 class="text-3xl font-black text-fuchsia-950 font-fun">Holy Child School Examination Report</h2>
+        <div id="modalStudentTitle" class="text-pink-800 font-extrabold text-lg mt-1 flex items-center justify-center gap-2">
+          <span id="modalAvatarPreview" class="text-2xl">👑</span>
+          <span id="modalStudentNameText">Little Princess</span>
+        </div>
+
+        <!-- Score Row -->
+        <div class="inline-flex items-center gap-5 sm:gap-8 bg-gradient-to-r from-pink-100 via-fuchsia-100 to-purple-100 border-2 border-pink-300 rounded-3xl px-6 sm:px-10 py-3 my-4 shadow-sm">
+          <div>
+            <span class="block text-xs font-black text-pink-800 uppercase">Marks</span>
+            <span id="modalMarksObtained" class="text-3xl sm:text-4xl font-black text-fuchsia-900 font-fun">0 / 100</span>
+          </div>
+          <div class="w-px h-10 bg-pink-300"></div>
+          <div>
+            <span class="block text-xs font-black text-purple-800 uppercase">Percentage</span>
+            <span id="modalPercentage" class="text-3xl sm:text-4xl font-black text-pink-600 font-fun">0%</span>
+          </div>
+          <div class="w-px h-10 bg-pink-300"></div>
+          <div>
+            <span class="block text-xs font-black text-amber-800 uppercase">Grade</span>
+            <span id="modalGrade" class="text-3xl sm:text-4xl font-black text-amber-500 font-fun">A+</span>
+          </div>
+        </div>
+
+        <div id="modalStars" class="text-3xl tracking-widest text-amber-400 mb-2">⭐⭐⭐⭐⭐</div>
+        <p id="modalFeedback" class="text-sm font-bold text-purple-900 max-w-lg mx-auto"></p>
+
+        <!-- Unlocked Badges -->
+        <div class="mt-4 pt-3 border-t border-pink-100">
+          <span class="text-xs font-black text-pink-500 uppercase tracking-wider block mb-2">Princess Skill Badges Awarded 🎖️</span>
+          <div id="badgesContainer" class="flex flex-wrap items-center justify-center gap-2"></div>
+        </div>
+      </div>
+
+      <!-- Screen Certificate Preview -->
+      <div class="my-6">
+        <div class="screen-certificate p-6 sm:p-8 rounded-3xl relative text-center">
+          <div class="mb-2">
+            <div class="text-pink-700 font-formal text-xs tracking-widest uppercase font-bold">Primary Educational Board • Established Excellence</div>
+            <h1 class="text-2xl sm:text-3xl font-formal text-fuchsia-950 font-bold tracking-wider mt-1">HOLY CHILD SCHOOL</h1>
+            <p class="text-[11px] text-pink-800 tracking-wider uppercase font-semibold">6-Month Mid-Term Mathematics Assessment & Honours</p>
+            <div class="w-24 h-0.5 bg-pink-500 mx-auto my-2 rounded-full"></div>
+          </div>
+
+          <h2 class="text-2xl font-signature text-pink-600 mb-1">Certificate of Mathematical Achievement</h2>
+          <p class="text-xs font-bold text-slate-500 uppercase tracking-widest">This certifies that</p>
+
+          <div class="flex items-center justify-center gap-2 my-2">
+            <span id="screenAvatar" class="text-3xl">👑</span>
+            <span id="screenCertStudentName" class="text-2xl sm:text-3xl font-black font-fun text-fuchsia-900 border-b-2 border-dashed border-pink-400 px-6 py-0.5">
+              Little Princess
+            </span>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-700 max-w-xl mx-auto leading-relaxed font-semibold">
+            of <strong class="text-fuchsia-950">Class 1 (<span id="screenCertSection">Sec A</span>)</strong>, Roll No: <strong id="screenCertRoll">01</strong> has successfully completed the <span class="font-bold text-pink-900">Class 1 6-Month Mid-Term Mathematics Examination (100 Marks)</span> demonstrating complete mastery in place value, 2-digit addition, subtraction facts, 3D solid shapes, and word problems.
+          </p>
+
+          <div class="flex items-center justify-center gap-4 my-3">
+            <div class="px-4 py-1.5 bg-pink-50 border border-pink-300 rounded-2xl">
+              <span class="block text-[10px] font-black text-pink-800 uppercase">Score</span>
+              <span id="screenCertMarks" class="text-lg font-black text-fuchsia-900 font-fun">100 / 100</span>
+            </div>
+            <div class="px-4 py-1.5 bg-purple-50 border border-purple-300 rounded-2xl">
+              <span class="block text-[10px] font-black text-purple-800 uppercase">Grade</span>
+              <span id="screenCertGrade" class="text-lg font-black text-purple-800 font-fun">Grade A+ (Distinction)</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-3 items-end pt-3 mt-2 border-t border-pink-200 text-[11px]">
+            <div>
+              <div id="screenCertDate" class="font-bold text-slate-800 border-b border-pink-300 pb-0.5 w-24 mx-auto">October 13, 2026</div>
+              <span class="text-slate-500 text-[10px] block mt-0.5">Date</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="w-12 h-12 rounded-full border-2 border-pink-500 bg-pink-100 flex items-center justify-center text-pink-800 font-bold text-[9px] shadow-sm">
+                ★ SEAL ★
+              </div>
+              <span class="text-[9px] text-pink-900 font-bold uppercase mt-0.5">Holy Child</span>
+            </div>
+            <div>
+              <div class="font-signature text-xl text-fuchsia-950 border-b border-pink-300 pb-0.5 w-28 mx-auto">Sister Mary</div>
+              <span class="text-slate-500 text-[10px] block mt-0.5">Principal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Footer -->
+      <div class="pt-4 border-t border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-3 no-print">
+        <button onclick="triggerPrintCertificate()" class="w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 active:scale-95 text-white font-black rounded-2xl flex items-center justify-center gap-2 shadow-lg transition">
+          <span>🖨️</span>
+          <span>Print A4 Certificate (Exact 1 Page)</span>
+        </button>
+        <div class="flex items-center gap-2 w-full sm:w-auto">
+          <button onclick="toggleDetailedReview()" id="reviewToggleBtn" class="w-full sm:w-auto px-5 py-3 bg-purple-100 hover:bg-purple-200 text-purple-900 font-bold rounded-2xl transition">
+            View Solution Sheet 📋
+          </button>
+          <button onclick="closeModal()" class="w-full sm:w-auto px-6 py-3 bg-slate-800 hover:bg-slate-900 text-white font-bold rounded-2xl transition">
+            Close
+          </button>
+        </div>
+      </div>
+
+      <!-- Solution Sheet Panel -->
+      <div id="detailedReviewContainer" class="hidden mt-6 pt-6 border-t-2 border-dashed border-pink-200 no-print">
+        <h4 class="font-fun text-xl font-bold text-fuchsia-950 mb-3">Itemized Review & Solutions</h4>
+        <div id="detailedReviewList" class="space-y-2.5 max-h-96 overflow-y-auto pr-2"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STRICT PRINT-ONLY A4 LANDSCAPE CONTAINER (EXACT 1 PAGE ZERO OVERFLOW) -->
+  <div id="print-certificate-container" style="display: none;">
+    <div class="a4-master-card">
+      <!-- Watermark Background -->
+      <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0.04; pointer-events: none; user-select: none;">
+        <span style="font-size: 130pt;">🔢</span>
+      </div>
+
+      <!-- Header Section -->
+      <div style="text-align: center; margin-bottom: 1.5mm; position: relative; z-index: 2;">
+        <div style="font-family: 'Cinzel', serif; font-size: 8pt; letter-spacing: 2px; color: #be185d; font-weight: 700; text-transform: uppercase;">
+          Affiliated & Recognized Primary Educational Institution
+        </div>
+        <h1 style="font-family: 'Cinzel', serif; font-size: 24pt; font-weight: 900; letter-spacing: 1.5px; color: #701a75; margin: 1.5mm 0 0.5mm 0;">
+          HOLY CHILD SCHOOL
+        </h1>
+        <div style="font-size: 8pt; font-weight: 600; letter-spacing: 1px; color: #475569; text-transform: uppercase;">
+          6-Month Mid-Term Mathematics Assessment • Primary Education Board
+        </div>
+        <div style="width: 80mm; height: 1.5px; background: #db2777; margin: 2mm auto;"></div>
+      </div>
+
+      <!-- Certificate Subtitle -->
+      <div style="text-align: center; margin-bottom: 2mm; position: relative; z-index: 2;">
+        <h2 style="font-family: 'Great Vibes', cursive; font-size: 26pt; color: #be185d; margin: 0; line-height: 1;">
+          Certificate of Mathematical Achievement
+        </h2>
+        <p style="font-size: 7.5pt; font-weight: 800; letter-spacing: 2px; color: #64748b; text-transform: uppercase; margin: 1mm 0 0 0;">
+          This is proudly awarded to
+        </p>
+      </div>
+
+      <!-- Recipient and Avatar -->
+      <div style="text-align: center; margin-bottom: 2.5mm; position: relative; z-index: 2;">
+        <div style="display: inline-flex; align-items: center; justify-content: center; gap: 4mm;">
+          <span id="printCertAvatar" style="font-size: 22pt;">👑</span>
+          <span id="printCertStudentName" style="font-family: 'Fredoka', cursive; font-size: 22pt; font-weight: 700; color: #701a75; border-bottom: 2px dashed #db2777; padding: 0 10mm 1mm 10mm;">
+            Student Name
+          </span>
+        </div>
+      </div>
+
+      <!-- Citation Body -->
+      <div style="text-align: center; max-width: 220mm; margin: 0 auto 2.5mm auto; font-size: 9.5pt; line-height: 1.4; color: #334155; position: relative; z-index: 2;">
+        A student of <strong style="color: #701a75;">Class 1 (<span id="printCertSection">Section A</span>)</strong>, Roll No: <strong id="printCertRoll" style="color: #701a75;">01</strong>, in recognition of outstanding place value reasoning, 2-digit arithmetic precision, and solid shape mastery in the <strong style="color: #0f172a;">Class 1 6-Month Mid-Term Mathematics Examination (100 Marks)</strong>.
+      </div>
+
+      <!-- Honors Badges -->
+      <div style="display: flex; justify-content: center; align-items: center; gap: 6mm; margin-bottom: 2mm; position: relative; z-index: 2;">
+        <div style="border: 1.5px solid #db2777; background: #fdf2f8; padding: 2mm 6mm; border-radius: 4mm; text-align: center; min-width: 36mm;">
+          <span style="display: block; font-size: 6.5pt; font-weight: 800; color: #9d174d; text-transform: uppercase;">Marks Secured</span>
+          <span id="printCertMarks" style="font-family: 'Fredoka', cursive; font-size: 15pt; font-weight: 800; color: #831843;">100 / 100</span>
+        </div>
+        <div style="border: 1.5px solid #a855f7; background: #faf5ff; padding: 2mm 6mm; border-radius: 4mm; text-align: center; min-width: 48mm;">
+          <span style="display: block; font-size: 6.5pt; font-weight: 800; color: #6b21a8; text-transform: uppercase;">Honorary Grade</span>
+          <span id="printCertGrade" style="font-family: 'Fredoka', cursive; font-size: 15pt; font-weight: 800; color: #7e22ce;">Grade A+ (Distinction)</span>
+        </div>
+      </div>
+
+      <!-- Badge Ribbons -->
+      <div id="printBadgesRow" style="display: flex; justify-content: center; gap: 3mm; margin-bottom: 2mm; position: relative; z-index: 2;"></div>
+
+      <!-- Footer & Signatures -->
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; padding: 0 5mm; border-top: 1px solid #fbcfe8; padding-top: 2mm; position: relative; z-index: 2;">
+        <div style="text-align: center; width: 45mm;">
+          <div id="printCertDate" style="font-size: 8.5pt; font-weight: 700; color: #1e293b; border-bottom: 1px solid #64748b; padding-bottom: 1mm;">
+            October 13, 2026
+          </div>
+          <span style="display: block; font-size: 6.5pt; font-weight: 600; color: #64748b; margin-top: 1mm; text-transform: uppercase;">
+            Date of Examination
+          </span>
+        </div>
+
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+          <div style="width: 14mm; height: 14mm; border-radius: 50%; border: 2px solid #db2777; background: #fdf2f8; display: flex; align-items: center; justify-content: center; font-size: 6.5pt; font-weight: 900; color: #9d174d; box-shadow: inset 0 0 4px rgba(219,39,119,0.3);">
+            ★ SEAL ★
+          </div>
+          <span style="font-size: 6.5pt; font-weight: 800; color: #831843; text-transform: uppercase; margin-top: 1mm; letter-spacing: 0.5px;">
+            Holy Child School
+          </span>
+        </div>
+
+        <div style="text-align: center; width: 45mm;">
+          <div style="font-family: 'Great Vibes', cursive; font-size: 17pt; color: #701a75; border-bottom: 1px solid #64748b; padding-bottom: 0;">
+            Sister Mary
+          </div>
+          <span style="display: block; font-size: 6.5pt; font-weight: 600; color: #64748b; margin-top: 1mm; text-transform: uppercase;">
+            Principal / Headmistress
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* ============================================================
+       WEB AUDIO SYNTHESIZER (Pops, Chimes, Fanfare)
+       ============================================================ */
+    let audioCtx = null;
+    function getAudioContext() {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+      return audioCtx;
+    }
+
+    function playBubblePop() {
+      try {
+        const ctx = getAudioContext();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(440, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(880, ctx.currentTime + 0.08);
+        gain.gain.setValueAtTime(0.18, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.08);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.09);
+      } catch (e) { console.log(e); }
+    }
+
+    function playCountingChime(pitchShift = 1) {
+      try {
+        const ctx = getAudioContext();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        const baseFreq = 523.25 * pitchShift;
+        osc.frequency.setValueAtTime(baseFreq, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(baseFreq * 1.5, ctx.currentTime + 0.1);
+        gain.gain.setValueAtTime(0.2, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.1);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.11);
+      } catch (e) { console.log(e); }
+    }
+
+    function playVictoryFanfare() {
+      try {
+        const ctx = getAudioContext();
+        const notes = [329.63, 392.00, 523.25, 659.25, 783.99];
+        notes.forEach((freq, idx) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(freq, ctx.currentTime + idx * 0.11);
+          gain.gain.setValueAtTime(0.22, ctx.currentTime + idx * 0.11);
+          gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + idx * 0.11 + 0.35);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(ctx.currentTime + idx * 0.11);
+          osc.stop(ctx.currentTime + idx * 0.11 + 0.4);
+        });
+      } catch (e) { console.log(e); }
+    }
+
+    /* ============================================================
+       ENGLISH WEB SPEECH SYNTHESIS ONLY
+       ============================================================ */
+    function speakEnglish(txt) {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(txt);
+      u.rate = 0.82;
+      u.pitch = 1.15;
+      u.lang = 'en-US';
+      window.speechSynthesis.speak(u);
+    }
+
+    function readQuestion(question, options) {
+      const cleanQ = question.replace(/<[^>]*>?/gm, ' ');
+      const cleanOpts = options ? options.map(o => o.replace(/<[^>]*>?/gm, ' ')) : [];
+      const full = cleanOpts.length > 0 ? `${cleanQ}. The choices are: ${cleanOpts.join(', ')}` : cleanQ;
+      speakEnglish(full);
+    }
+
+    function tapEmojiCounter(el, countNum) {
+      el.classList.toggle('tapped');
+      playCountingChime(1 + (countNum * 0.05));
+      speakEnglish(String(countNum));
+    }
+
+    /* ============================================================
+       6-MONTH MID-TERM MATH EXAM DATA (40 Questions = 100 Marks)
+       ============================================================ */
+    const examData = {
+      sectionA: [
+        { 
+          id: 1, marks: 2, icon: '🔟', 
+          question: 'How many tens and ones are there in the number 34?', 
+          options: ['3 tens and 4 ones', '4 tens and 3 ones', '30 tens and 4 ones'], 
+          correct: '3 tens and 4 ones' 
+        },
+        { 
+          id: 2, marks: 2, icon: '🔢', 
+          question: 'Which number is made of 4 tens and 7 ones? (40 + 7)', 
+          options: ['47', '74', '407'], 
+          correct: '47' 
+        },
+        { 
+          id: 3, marks: 2, icon: '⏮️', 
+          question: 'What number comes right BEFORE 50? (..., 50)', 
+          options: ['49', '48', '51'], 
+          correct: '49' 
+        },
+        { 
+          id: 4, marks: 2, icon: '🖐️', 
+          question: 'Count forward by 5s: 5, 10, 15, 20, ____', 
+          options: ['25', '22', '30'], 
+          correct: '25' 
+        },
+        { 
+          id: 5, marks: 2, icon: '🏷️', 
+          question: 'Write the number name for the number 29:', 
+          options: ['Twenty-nine', 'Twelve-nine', 'Thirty-nine'], 
+          correct: 'Twenty-nine' 
+        }
+      ],
+      sectionB: [
+        { 
+          id: 6, marks: 2, icon: '🐘', 
+          question: 'Which number is GREATER: 38 or 43?', 
+          options: ['43', '38'], 
+          correct: '43' 
+        },
+        { 
+          id: 7, marks: 2, icon: '📶', 
+          question: 'Arrange in ascending order (smallest to biggest): 15, 42, 28', 
+          options: ['15, 28, 42', '42, 28, 15', '28, 15, 42'], 
+          correct: '15, 28, 42' 
+        },
+        { 
+          id: 8, marks: 2, icon: '🐊', 
+          question: 'Which sign correctly compares: 25 ___ 35', 
+          options: ['< (is less than)', '> (is greater than)', '= (is equal to)'], 
+          correct: '< (is less than)' 
+        },
+        { 
+          id: 9, marks: 2, icon: '👑', 
+          question: 'Which number is the LARGEST in this group: 19, 31, 26, 45?', 
+          options: ['45', '31', '26'], 
+          correct: '45' 
+        },
+        { 
+          id: 10, marks: 2, icon: '↔️', 
+          question: 'What number comes BETWEEN 39 and 41? (39, ____, 41)', 
+          options: ['40', '38', '42'], 
+          correct: '40' 
+        }
+      ],
+      sectionC: [
+        { 
+          id: 11, marks: 2, icon: '🍓', 
+          question: 'Solve: 12 + 5 = ?', 
+          countersA: 12, emojiA: '🍓',
+          countersB: 5, emojiB: '🍓',
+          options: ['17', '16', '18'], 
+          correct: '17' 
+        },
+        { 
+          id: 12, marks: 2, icon: '🌸', 
+          question: 'Solve: 20 + 10 = ?', 
+          countersA: 10, emojiA: '🌸', countersLabelA: '20 (Two tens)',
+          countersB: 10, emojiB: '🌸', countersLabelB: '10 (One ten)',
+          options: ['30', '25', '40'], 
+          correct: '30' 
+        },
+        { 
+          id: 13, marks: 2, icon: '🦋', 
+          question: 'Solve: 14 + 13 = ?', 
+          countersA: 7, emojiA: '🦋', countersLabelA: '14 butterflies',
+          countersB: 7, emojiB: '🦋', countersLabelB: '13 butterflies',
+          options: ['27', '26', '28'], 
+          correct: '27' 
+        },
+        { 
+          id: 14, marks: 2, icon: '🧁', 
+          question: 'Solve: 31 + 6 = ?', 
+          countersA: 6, emojiA: '🧁', countersLabelA: '31 cupcakes',
+          countersB: 6, emojiB: '🧁', countersLabelB: '6 cupcakes',
+          options: ['37', '36', '38'], 
+          correct: '37' 
+        },
+        { 
+          id: 15, marks: 2, icon: '🍬', 
+          question: 'Solve: 25 + 4 = ?', 
+          countersA: 5, emojiA: '🍬', countersLabelA: '25 candies',
+          countersB: 4, emojiB: '🍬', countersLabelB: '4 candies',
+          options: ['29', '28', '30'], 
+          correct: '29' 
+        }
+      ],
+      sectionD: [
+        { 
+          id: 16, marks: 2, icon: '🎈', 
+          question: 'Solve: 15 - 5 = ?', 
+          options: ['10', '5', '11'], 
+          correct: '10' 
+        },
+        { 
+          id: 17, marks: 2, icon: '🍪', 
+          question: 'Solve: 18 - 6 = ?', 
+          options: ['12', '11', '13'], 
+          correct: '12' 
+        },
+        { 
+          id: 18, marks: 2, icon: '🍎', 
+          question: 'Solve: 14 - 10 = ?', 
+          options: ['4', '5', '14'], 
+          correct: '4' 
+        },
+        { 
+          id: 19, marks: 2, icon: '🦆', 
+          question: 'Solve: 19 - 8 = ?', 
+          options: ['11', '10', '12'], 
+          correct: '11' 
+        },
+        { 
+          id: 20, marks: 2, icon: '✨', 
+          question: 'Solve: 16 - 0 = ? (Subtracting zero leaves the same number)', 
+          options: ['16', '0', '1'], 
+          correct: '16' 
+        }
+      ],
+      sectionE: [
+        { id: 21, marks: 2, icon: '🎲', prefix: 'A solid shape that looks like a party gift box or dice is a', suffix: '.', options: ['Cube', 'Sphere'], correct: 'Cube', question: 'A solid shape that looks like a party gift box or dice is a Cube.' },
+        { id: 22, marks: 2, icon: '⚽', prefix: 'A round football has the 3D solid shape of a', suffix: '.', options: ['Sphere', 'Cylinder'], correct: 'Sphere', question: 'A round football has the 3D solid shape of a Sphere.' },
+        { id: 23, marks: 2, icon: '🥫', prefix: 'A soda can and a flashlight battery look like a', suffix: '.', options: ['Cylinder', 'Cube'], correct: 'Cylinder', question: 'A soda can and a flashlight battery look like a Cylinder.' },
+        { id: 24, marks: 2, icon: '⏰', prefix: 'A clock face has', suffix: 'numbers written on it.', options: ['12', '30'], correct: '12', question: 'A clock face has 12 numbers written on it.' },
+        { id: 25, marks: 2, icon: '🤏', prefix: 'The hand that shows hours on a clock is the', suffix: 'hand.', options: ['Short', 'Long'], correct: 'Short', question: 'The hand that shows hours on a clock is the Short hand.' },
+        { id: 26, marks: 2, icon: '📏', prefix: 'The hand that shows minutes on a clock is the', suffix: 'hand.', options: ['Long', 'Short'], correct: 'Long', question: 'The hand that shows minutes on a clock is the Long hand.' },
+        { id: 27, marks: 2, icon: '➕', prefix: 'Ten plus twenty: 10 + 20 =', suffix: '.', options: ['30', '15'], correct: '30', question: 'Ten plus twenty: 10 + 20 = 30.' },
+        { id: 28, marks: 2, icon: '➖', prefix: 'Twenty take away five: 20 - 5 =', suffix: '.', options: ['15', '12'], correct: '15', question: 'Twenty take away five: 20 - 5 = 15.' },
+        { id: 29, marks: 2, icon: '📅', prefix: 'The day that comes between Tuesday and Thursday is', suffix: '.', options: ['Wednesday', 'Morning'], correct: 'Wednesday', question: 'The day that comes between Tuesday and Thursday is Wednesday.' },
+        { id: 30, marks: 2, icon: '🌅', prefix: 'We wake up and see the lovely sunrise in the', suffix: '.', options: ['Morning', 'Wednesday'], correct: 'Morning', question: 'We wake up and see the lovely sunrise in the Morning.' }
+      ],
+      sectionF: [
+        { 
+          id: 31, marks: 2, icon: '🍦', 
+          question: 'An ice-cream cone has the 3D shape of a:', 
+          options: ['Cone', 'Cube', 'Cylinder'], 
+          correct: 'Cone' 
+        },
+        { 
+          id: 32, marks: 2, icon: '🎾', 
+          question: 'A tennis ball looks like a 3D solid shape called a:', 
+          options: ['Sphere', 'Square', 'Triangle'], 
+          correct: 'Sphere' 
+        },
+        { 
+          id: 33, marks: 2, icon: '🧱', 
+          question: 'A wooden toy building block with 6 flat square faces is a:', 
+          options: ['Cube', 'Cone', 'Circle'], 
+          correct: 'Cube' 
+        },
+        { 
+          id: 34, marks: 2, icon: '🎳', 
+          question: 'Which shape can roll easily on the floor without stopping?', 
+          options: ['Sphere', 'Cube', 'Book'], 
+          correct: 'Sphere' 
+        },
+        { 
+          id: 35, marks: 2, icon: '🥛', 
+          question: 'Which object has the shape of a cylinder?', 
+          options: ['A water glass', 'An ice cream scoop', 'A playing card'], 
+          correct: 'A water glass' 
+        }
+      ],
+      sectionG: [
+        { 
+          id: 36, marks: 2, icon: '🕓', 
+          question: 'The short hand points to 4 and the long hand points to 12. What time is it?', 
+          options: ['4 o\'clock', '12 o\'clock', '6 o\'clock'], 
+          correct: '4 o\'clock' 
+        },
+        { 
+          id: 37, marks: 2, icon: '🗓️', 
+          question: 'How many days are there in two weeks? (Hint: 7 + 7)', 
+          options: ['14 days', '10 days', '20 days'], 
+          correct: '14 days' 
+        },
+        { 
+          id: 38, marks: 2, icon: '🌅', 
+          question: 'Which day of the week comes right BEFORE Sunday?', 
+          options: ['Saturday', 'Friday', 'Monday'], 
+          correct: 'Saturday' 
+        },
+        { 
+          id: 39, marks: 2, icon: '🕘', 
+          question: 'When the long hand is at 12 and the short hand is at 9, the clock shows:', 
+          options: ['9 o\'clock', '3 o\'clock', '12 o\'clock'], 
+          correct: '9 o\'clock' 
+        },
+        { 
+          id: 40, marks: 2, icon: '🌙🍽️', 
+          question: 'At night when the moon is glowing, we sit with our family and eat our:', 
+          options: ['Dinner', 'Breakfast', 'Lunch'], 
+          correct: 'Dinner' 
+        }
+      ],
+      sectionH: [
+        { 
+          id: 41, marks: 5, icon: '🌸🌻', 
+          question: 'Bella picks 14 pink daisies (🌸). Her sister gives her 5 yellow sunflowers (🌻). How many flowers does Bella have in total? (14 + 5)', 
+          options: ['19 flowers', '18 flowers', '20 flowers'], 
+          correct: '19 flowers' 
+        },
+        { 
+          id: 42, marks: 5, icon: '🧁', 
+          question: 'Mother baked 16 delicious chocolate cupcakes (🧁). The family ate 6 cupcakes after dinner. How many cupcakes are left on the tray? (16 - 6)', 
+          options: ['10 cupcakes', '12 cupcakes', '9 cupcakes'], 
+          correct: '10 cupcakes' 
+        },
+        { 
+          id: 43, marks: 5, icon: '🔮', 
+          question: 'Rohan has 11 blue marbles in a jar. He finds 8 more marbles in his toy box. How many marbles does Rohan have altogether? (11 + 8)', 
+          options: ['19 marbles', '18 marbles', '20 marbles'], 
+          correct: '19 marbles' 
+        },
+        { 
+          id: 44, marks: 5, icon: '🌳🐦', 
+          question: 'There were 15 colorful birds sitting on an oak tree. 4 birds flew away into the sky. How many birds stayed on the tree? (15 - 4)', 
+          options: ['11 birds', '12 birds', '10 birds'], 
+          correct: '11 birds' 
+        }
+      ]
+    };
+
+    let userAnswers = {};
+    let selectedAvatarIcon = '👑';
+    let timerSeconds = 60 * 60;
+    let timerInterval = null;
+    let isTimerRunning = false;
+
+    window.onload = function() {
+      renderStandardSection('sectionA', examData.sectionA);
+      renderStandardSection('sectionB', examData.sectionB);
+      renderAdditionCountersSection('sectionC', examData.sectionC);
+      renderStandardSection('sectionD', examData.sectionD);
+      renderFillBlanksSection('sectionE', examData.sectionE);
+      renderStandardSection('sectionF', examData.sectionF);
+      renderStandardSection('sectionG', examData.sectionG);
+      renderStandardSection('sectionH', examData.sectionH);
+
+      startTimer();
+      updateProgress();
+    };
+
+    function selectAvatar(icon) {
+      selectedAvatarIcon = icon;
+      document.getElementById('currentAvatarDisplay').innerText = icon;
+      document.getElementById('modalAvatarPreview').innerText = icon;
+      document.getElementById('screenAvatar').innerText = icon;
+      document.getElementById('printCertAvatar').innerText = icon;
+      playBubblePop();
+    }
+
+    function renderStandardSection(containerKey, list) {
+      const container = document.getElementById(`${containerKey}_container`);
+      container.innerHTML = list.map(q => `
+        <div id="card-${q.id}" class="bg-white rounded-3xl p-4 sm:p-5 border-3 border-pink-200 shadow-sm transition-all hover:shadow-md">
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <div class="flex items-center gap-2">
+              <span class="w-8 h-8 rounded-2xl bg-gradient-to-r from-pink-500 to-purple-600 text-white font-fun font-bold flex items-center justify-center text-xs shadow-sm">
+                ${q.id}
+              </span>
+              <span class="text-2xl">${q.icon}</span>
+              <span class="text-xs font-black text-pink-600 uppercase tracking-wider bg-pink-50 px-2 py-0.5 rounded-full border border-pink-200">${q.marks} Marks</span>
+            </div>
+            <button onclick="readQuestion('${escapeString(q.question)}', ${JSON.stringify(q.options).replace(/"/g, '&quot;')})" class="px-3 py-1.5 bg-gradient-to-r from-pink-100 to-purple-100 hover:from-pink-200 hover:to-purple-200 active:scale-95 text-fuchsia-950 rounded-xl text-xs font-black flex items-center gap-1.5 transition border border-pink-300 shadow-sm">
+              <span>🔊</span>
+              <span>Listen</span>
+            </button>
+          </div>
+
+          <div class="question-highlight-pill rounded-2xl p-3 mb-3">
+            <p class="font-black text-purple-950 text-base sm:text-lg leading-snug">
+              ${q.question}
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+            ${q.options.map(opt => `
+              <button type="button" 
+                id="btn-${q.id}-${sanitize(opt)}" 
+                onclick="chooseOption(${q.id}, '${escapeString(opt)}')"
+                class="option-btn opt-btn-${q.id} text-left px-4 py-3 rounded-2xl border-2 border-pink-200 bg-pink-50/50 hover:bg-pink-100/70 font-extrabold text-sm sm:text-base text-pink-950 flex items-center justify-between">
+                <span>${opt}</span>
+                <span class="indicator w-5 h-5 rounded-full border-2 border-pink-300 flex items-center justify-center text-[10px] font-black"></span>
+              </button>
+            `).join('')}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderAdditionCountersSection(containerKey, list) {
+      const container = document.getElementById(`${containerKey}_container`);
+      container.innerHTML = list.map(q => {
+        let countersHtml = '<div class="flex items-center gap-1.5 flex-wrap my-2 bg-white/80 p-2.5 rounded-2xl border border-pink-200">';
+        let countNum = 1;
+
+        if (q.countersLabelA) {
+          countersHtml += `<span class="text-xs font-black text-pink-800 bg-pink-100 px-2 py-0.5 rounded-lg mr-1">${q.countersLabelA}</span>`;
+        }
+        for (let i = 0; i < q.countersA; i++) {
+          countersHtml += `<span onclick="tapEmojiCounter(this, ${countNum})" title="Tap to count!" class="counter-emoji text-2xl p-1 bg-pink-50 rounded-xl border border-pink-200 shadow-sm">${q.emojiA}</span>`;
+          countNum++;
+        }
+
+        countersHtml += `<span class="text-xl font-black text-pink-600 px-2">+</span>`;
+
+        if (q.countersLabelB) {
+          countersHtml += `<span class="text-xs font-black text-purple-800 bg-purple-100 px-2 py-0.5 rounded-lg mr-1">${q.countersLabelB}</span>`;
+        }
+        for (let j = 0; j < q.countersB; j++) {
+          countersHtml += `<span onclick="tapEmojiCounter(this, ${countNum})" title="Tap to count!" class="counter-emoji text-2xl p-1 bg-purple-50 rounded-xl border border-purple-200 shadow-sm">${q.emojiB}</span>`;
+          countNum++;
+        }
+
+        countersHtml += `<span class="text-xs font-bold text-pink-700 ml-auto bg-pink-100/70 px-2 py-1 rounded-xl">👆 Tap to count!</span></div>`;
+
+        return `
+          <div id="card-${q.id}" class="bg-white rounded-3xl p-4 sm:p-5 border-3 border-pink-200 shadow-sm transition-all hover:shadow-md">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-2">
+                <span class="w-8 h-8 rounded-2xl bg-gradient-to-r from-pink-500 to-purple-600 text-white font-fun font-bold flex items-center justify-center text-xs shadow-sm">
+                  ${q.id}
+                </span>
+                <span class="text-2xl">${q.icon}</span>
+                <span class="text-xs font-black text-pink-600 uppercase tracking-wider bg-pink-50 px-2 py-0.5 rounded-full border border-pink-200">${q.marks} Marks</span>
+              </div>
+              <button onclick="readQuestion('${escapeString(q.question)}', ${JSON.stringify(q.options).replace(/"/g, '&quot;')})" class="px-3 py-1.5 bg-gradient-to-r from-pink-100 to-purple-100 hover:from-pink-200 hover:to-purple-200 active:scale-95 text-fuchsia-950 rounded-xl text-xs font-black flex items-center gap-1.5 transition border border-pink-300 shadow-sm">
+                <span>🔊</span>
+                <span>Listen</span>
+              </button>
+            </div>
+
+            <div class="question-highlight-pill rounded-2xl p-3 mb-3">
+              <p class="font-black text-purple-950 text-base sm:text-lg leading-snug">
+                ${q.question}
+              </p>
+              ${countersHtml}
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+              ${q.options.map(opt => `
+                <button type="button" 
+                  id="btn-${q.id}-${sanitize(opt)}" 
+                  onclick="chooseOption(${q.id}, '${escapeString(opt)}')"
+                  class="option-btn opt-btn-${q.id} text-left px-4 py-3 rounded-2xl border-2 border-pink-200 bg-pink-50/50 hover:bg-pink-100/70 font-extrabold text-sm sm:text-base text-pink-950 flex items-center justify-between">
+                  <span>${opt}</span>
+                  <span class="indicator w-5 h-5 rounded-full border-2 border-pink-300 flex items-center justify-center text-[10px] font-black"></span>
+                </button>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderFillBlanksSection(containerKey, list) {
+      const container = document.getElementById(`${containerKey}_container`);
+      container.innerHTML = list.map(q => `
+        <div id="card-${q.id}" class="bg-white rounded-3xl p-4 sm:p-5 border-3 border-pink-200 shadow-sm transition-all hover:shadow-md">
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <div class="flex items-center gap-2">
+              <span class="w-8 h-8 rounded-2xl bg-gradient-to-r from-pink-500 to-purple-600 text-white font-fun font-bold flex items-center justify-center text-xs shadow-sm">
+                ${q.id}
+              </span>
+              <span class="text-2xl">${q.icon}</span>
+              <span class="text-xs font-black text-pink-600 uppercase tracking-wider bg-pink-50 px-2 py-0.5 rounded-full border border-pink-200">${q.marks} Marks</span>
+            </div>
+            <button onclick="speakEnglish('${escapeString(q.question)}')" class="px-3 py-1.5 bg-gradient-to-r from-pink-100 to-purple-100 hover:from-pink-200 hover:to-purple-200 active:scale-95 text-fuchsia-950 rounded-xl text-xs font-black flex items-center gap-1.5 transition border border-pink-300 shadow-sm">
+              <span>🔊</span>
+              <span>Listen</span>
+            </button>
+          </div>
+
+          <div class="question-highlight-pill rounded-2xl p-3 mb-3">
+            <div class="font-black text-purple-950 text-base sm:text-lg flex flex-wrap items-center gap-2 leading-relaxed">
+              <span>${q.prefix}</span>
+              <span id="slot-${q.id}" class="inline-block min-w-[80px] text-center border-b-3 border-dashed border-pink-500 bg-white px-3 py-0.5 rounded-xl text-pink-600 font-black shadow-inner">______</span>
+              <span>${q.suffix}</span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2 pt-1 border-t border-pink-100">
+            <span class="text-xs font-black text-pink-800">Tap Word Bank:</span>
+            ${q.options.map(opt => `
+              <button type="button" 
+                id="blankbtn-${q.id}-${sanitize(opt)}" 
+                onclick="chooseBlank(${q.id}, '${escapeString(opt)}')"
+                class="blank-opt-${q.id} px-3.5 py-1.5 rounded-xl border-2 border-pink-200 bg-pink-50 hover:bg-pink-200 text-pink-900 text-xs sm:text-sm font-black active:scale-95 transition shadow-sm">
+                🌸 ${opt}
+              </button>
+            `).join('')}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function chooseOption(questionId, val) {
+      playBubblePop();
+      userAnswers[questionId] = val;
+      const buttons = document.querySelectorAll(`.opt-btn-${questionId}`);
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-gradient-to-r', 'from-pink-500', 'to-purple-600', 'text-white', 'border-transparent', 'shadow-md');
+        btn.classList.add('bg-pink-50/50', 'text-pink-950', 'border-pink-200');
+        const ind = btn.querySelector('.indicator');
+        if (ind) {
+          ind.innerHTML = '';
+          ind.classList.remove('bg-white', 'text-pink-600', 'border-white');
+          ind.classList.add('border-pink-300');
+        }
+      });
+
+      const active = document.getElementById(`btn-${questionId}-${sanitize(val)}`);
+      if (active) {
+        active.classList.remove('bg-pink-50/50', 'text-pink-950', 'border-pink-200');
+        active.classList.add('bg-gradient-to-r', 'from-pink-500', 'to-purple-600', 'text-white', 'border-transparent', 'shadow-md');
+        const ind = active.querySelector('.indicator');
+        if (ind) {
+          ind.innerHTML = '✓';
+          ind.classList.remove('border-pink-300');
+          ind.classList.add('bg-white', 'text-pink-600', 'border-white');
+        }
+      }
+
+      const card = document.getElementById(`card-${questionId}`);
+      if (card) {
+        card.classList.remove('border-pink-200');
+        card.classList.add('border-pink-500', 'bg-pink-50/20');
+      }
+      updateProgress();
+    }
+
+    function chooseBlank(questionId, val) {
+      playBubblePop();
+      userAnswers[questionId] = val;
+      const slot = document.getElementById(`slot-${questionId}`);
+      if (slot) {
+        slot.innerText = val;
+        slot.classList.remove('border-dashed');
+        slot.classList.add('border-solid', 'border-pink-500', 'bg-pink-100', 'text-pink-900');
+      }
+
+      const buttons = document.querySelectorAll(`.blank-opt-${questionId}`);
+      buttons.forEach(b => {
+        b.classList.remove('bg-pink-500', 'text-white', 'border-pink-500');
+        b.classList.add('bg-pink-50', 'text-pink-900', 'border-pink-200');
+      });
+
+      const active = document.getElementById(`blankbtn-${questionId}-${sanitize(val)}`);
+      if (active) {
+        active.classList.remove('bg-pink-50', 'text-pink-900', 'border-pink-200');
+        active.classList.add('bg-pink-500', 'text-white', 'border-pink-500');
+      }
+
+      const card = document.getElementById(`card-${questionId}`);
+      if (card) {
+        card.classList.remove('border-pink-200');
+        card.classList.add('border-pink-500', 'bg-pink-50/20');
+      }
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const answered = Object.keys(userAnswers).length;
+      const total = 40;
+      document.getElementById('progressText').innerText = `${answered} / ${total} Answered`;
+      document.getElementById('starCounter').innerText = `⭐ ${answered} Stars`;
+      const pct = (answered / total) * 100;
+      document.getElementById('progressBar').style.width = `${pct}%`;
+    }
+
+    function startTimer() {
+      isTimerRunning = true;
+      clearInterval(timerInterval);
+      timerInterval = setInterval(() => {
+        if (timerSeconds > 0) {
+          timerSeconds--;
+          renderTimer();
+        } else {
+          clearInterval(timerInterval);
+          submitExam();
+        }
+      }, 1000);
+      renderTimer();
+    }
+
+    function renderTimer() {
+      const mins = Math.floor(timerSeconds / 60);
+      const secs = timerSeconds % 60;
+      document.getElementById('timerDisplay').innerText = 
+        `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+    }
+
+    function toggleTimer() {
+      const btn = document.getElementById('timerToggleBtn');
+      if (isTimerRunning) {
+        clearInterval(timerInterval);
+        isTimerRunning = false;
+        btn.innerText = "Resume";
+      } else {
+        startTimer();
+        btn.innerText = "Pause";
+      }
+    }
+
+    function resetTimer() {
+      clearInterval(timerInterval);
+      timerSeconds = 60 * 60;
+      renderTimer();
+      startTimer();
+      document.getElementById('timerToggleBtn').innerText = "Pause";
+    }
+
+    function submitExam() {
+      clearInterval(timerInterval);
+      const rawName = document.getElementById('studentName').value.trim();
+      const studentName = rawName || 'Little Princess';
+      const studentRoll = document.getElementById('studentRoll').value.trim() || 'HCS-M6-01';
+      const studentSection = document.getElementById('studentSection').value || 'A';
+
+      const allQ = [
+        ...examData.sectionA,
+        ...examData.sectionB,
+        ...examData.sectionC,
+        ...examData.sectionD,
+        ...examData.sectionE,
+        ...examData.sectionF,
+        ...examData.sectionG,
+        ...examData.sectionH
+      ];
+
+      let totalScore = 0;
+      let reviewHtml = '';
+
+      allQ.forEach(q => {
+        const ans = userAnswers[q.id];
+        const isRight = ans && ans.trim().toLowerCase() === q.correct.trim().toLowerCase();
+        if (isRight) totalScore += q.marks;
+
+        reviewHtml += `
+          <div class="p-2.5 rounded-2xl border text-xs ${isRight ? 'bg-emerald-50 border-emerald-200' : 'bg-rose-50 border-rose-200'}">
+            <div class="flex justify-between font-extrabold mb-1">
+              <span>Q${q.id}. ${q.question || q.prefix + ' ___ ' + q.suffix}</span>
+              <span class="${isRight ? 'text-emerald-700' : 'text-rose-600'}">
+                ${isRight ? `+${q.marks} Marks` : '0 Marks'}
+              </span>
+            </div>
+            <div class="text-slate-600 font-bold">
+              Your answer: <strong class="${isRight ? 'text-emerald-800' : 'text-rose-700'}">${ans || 'Skipped'}</strong>
+              ${!isRight ? ` | Correct answer: <strong class="text-pink-700">${q.correct}</strong>` : ''}
+            </div>
+          </div>
+        `;
+      });
+
+      let grade = 'A+';
+      let distinctionText = 'Grade A+ (Distinction)';
+      let stars = '⭐⭐⭐⭐⭐';
+      let badge = '👑';
+      let feedback = 'Outstanding Mid-Term Mathematics Excellence! You mastered place value, 2-digit addition, subtraction facts, solid shapes, and word problems!';
+
+      const badges = [];
+      badges.push({ name: '🌟 Place Value Star', color: 'bg-pink-100 text-pink-800 border-pink-300' });
+      badges.push({ name: '➕ Addition Queen', color: 'bg-purple-100 text-purple-800 border-purple-300' });
+
+      if (totalScore >= 60) {
+        badges.push({ name: '🧊 3D Shape Master', color: 'bg-fuchsia-100 text-fuchsia-800 border-fuchsia-300' });
+      }
+      if (totalScore >= 80) {
+        badges.push({ name: '🏆 Math Champion', color: 'bg-amber-100 text-amber-800 border-amber-300' });
+      }
+
+      if (totalScore < 40) {
+        grade = 'C';
+        distinctionText = 'Grade C (Keep Practicing)';
+        stars = '⭐⭐';
+        badge = '🌸';
+        feedback = 'Sweet effort! Keep practicing your counting, 2-digit sums, and 3D shapes every day!';
+      } else if (totalScore < 70) {
+        grade = 'B';
+        distinctionText = 'Grade B (Good Effort)';
+        stars = '⭐⭐⭐';
+        badge = '⭐';
+        feedback = 'Well done, Princess! You answered so many mid-term math problems correctly!';
+      } else if (totalScore < 90) {
+        grade = 'A';
+        distinctionText = 'Grade A (Excellent)';
+        stars = '⭐⭐⭐⭐';
+        badge = '🎖️';
+        feedback = 'Brilliant achievement! You solved all the math problems with great precision and focus!';
+      }
+
+      document.getElementById('modalStudentNameText').innerText = `${studentName} • Roll No: ${studentRoll}`;
+      document.getElementById('modalMarksObtained').innerText = `${totalScore} / 100`;
+      document.getElementById('modalPercentage').innerText = `${totalScore}%`;
+      document.getElementById('modalGrade').innerText = grade;
+      document.getElementById('modalStars').innerText = stars;
+      document.getElementById('modalBadge').innerText = badge;
+      document.getElementById('modalFeedback').innerText = feedback;
+      document.getElementById('detailedReviewList').innerHTML = reviewHtml;
+
+      document.getElementById('badgesContainer').innerHTML = badges.map(b => `
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-black border ${b.color} shadow-sm animate-pulse">
+          ${b.name}
+        </span>
+      `).join('');
+
+      document.getElementById('screenCertStudentName').innerText = studentName;
+      document.getElementById('screenCertRoll').innerText = studentRoll;
+      document.getElementById('screenCertSection').innerText = `Sec ${studentSection}`;
+      document.getElementById('screenCertMarks').innerText = `${totalScore} / 100`;
+      document.getElementById('screenCertGrade').innerText = distinctionText;
+      
+      const today = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+      document.getElementById('screenCertDate').innerText = today;
+
+      document.getElementById('printCertStudentName').innerText = studentName;
+      document.getElementById('printCertRoll').innerText = studentRoll;
+      document.getElementById('printCertSection').innerText = `Section ${studentSection}`;
+      document.getElementById('printCertMarks').innerText = `${totalScore} / 100`;
+      document.getElementById('printCertGrade').innerText = distinctionText;
+      document.getElementById('printCertDate').innerText = today;
+      document.getElementById('printCertAvatar').innerText = selectedAvatarIcon;
+
+      document.getElementById('printBadgesRow').innerHTML = badges.map(b => `
+        <span style="display: inline-block; font-size: 6.5pt; font-weight: 800; background: #fdf2f8; border: 1px solid #db2777; color: #9d174d; padding: 1mm 2.5mm; border-radius: 2mm;">
+          ${b.name}
+        </span>
+      `).join('');
+
+      document.getElementById('resultModal').classList.remove('hidden');
+
+      playVictoryFanfare();
+      launchConfetti();
+
+      speakEnglish(`Hooray ${studentName}! You scored ${totalScore} out of 100 on your 6-Month Mid-Term Mathematics Examination with Grade ${grade}. Sister Mary has awarded your Holy Child School Certificate!`);
+    }
+
+    function launchConfetti() {
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 150,
+          spread: 90,
+          origin: { y: 0.6 }
+        });
+        setTimeout(() => {
+          confetti({
+            particleCount: 100,
+            angle: 60,
+            spread: 65,
+            origin: { x: 0.1, y: 0.7 }
+          });
+          confetti({
+            particleCount: 100,
+            angle: 120,
+            spread: 65,
+            origin: { x: 0.9, y: 0.7 }
+          });
+        }, 300);
+      }
+    }
+
+    function triggerPrintCertificate() {
+      window.print();
+    }
+
+    function toggleDetailedReview() {
+      const panel = document.getElementById('detailedReviewContainer');
+      const btn = document.getElementById('reviewToggleBtn');
+      if (panel.classList.contains('hidden')) {
+        panel.classList.remove('hidden');
+        btn.innerText = "Hide Solution Sheet";
+      } else {
+        panel.classList.add('hidden');
+        btn.innerText = "View Solution Sheet 📋";
+      }
+    }
+
+    function closeModal() {
+      document.getElementById('resultModal').classList.add('hidden');
+    }
+
+    function resetAnswers() {
+      userAnswers = {};
+      renderStandardSection('sectionA', examData.sectionA);
+      renderStandardSection('sectionB', examData.sectionB);
+      renderAdditionCountersSection('sectionC', examData.sectionC);
+      renderStandardSection('sectionD', examData.sectionD);
+      renderFillBlanksSection('sectionE', examData.sectionE);
+      renderStandardSection('sectionF', examData.sectionF);
+      renderStandardSection('sectionG', examData.sectionG);
+      renderStandardSection('sectionH', examData.sectionH);
+      updateProgress();
+    }
+
+    function sanitize(str) {
+      return String(str).replace(/[^a-zA-Z0-9]/g, '_');
+    }
+
+    function escapeString(str) {
+      return String(str).replace(/'/g, "\\'");
+    }
+  </script>
+</body>
+</html>
